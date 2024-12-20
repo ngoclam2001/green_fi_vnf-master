@@ -3075,12 +3075,6 @@ img {
   height: 2px;
   background-color: #e5e5e5;
 }
-
-.section-primary__container {
-  display: grid;
-  grid-template-columns: 1fr 330px;
-  grid-gap: 20px;
-}
 .section-primary__center .articles__large .article__img {
   grid-column: 2/4;
 }
@@ -3723,6 +3717,63 @@ img {
   background-color: #04416D;
   background-image: url("../images/banner_dsk.png");
 }
+.header_events {
+  border-left: 4px solid #00b14f;
+  padding-left: 10px;
+  margin-bottom: 20px;
+}
+
+.headline_events {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #fff;
+  font-family: "Mulish", sans-serif;
+}
+
+
+.card_events {
+  background-color: white;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card_events img {
+  width: 100%;
+  display: block;
+}
+
+.card-content_events {
+  padding: 20px 10px 10px 10px;
+}
+
+.card-content_events p {
+  margin-bottom: 12px;
+}
+
+.card-title_events {
+  color: #000000;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  font-family: "Mulish", sans-serif;
+}
+
+.card_events {
+  color: gray;
+  font-size: 14px;
+}
+
+.cate_title {
+  color: #04416D;
+  margin-top: 14px;
+}
+
+.btn_load_more {
+  background-color: #318D43;
+  color: #fff;
+  border-radius: 3px;
+}
 @media (max-width: 1600px) {
   /*------------------------------------------------------------- header*/
   .navbar-container {
@@ -3919,7 +3970,15 @@ img {
   .event-stream__container {
     padding: 20px 15px 40px;
   }
-
+  .card_events{
+    max-width: 330px !important;
+  }
+  .cate-primary__left .cate-box-oneTop{
+    flex-direction: column;
+  }
+  .cate_title{
+    margin-top: 10px;
+  }
   /*------------------------------------------------------------- cate*/
   /*------------------------------------------------------------- detail*/
   .detail-primary .articles-primary-mb .article__title {
@@ -4093,11 +4152,6 @@ img {
 
   .d-sm-grid {
     display: grid;
-  }
-
-  .w-wrapper {
-    padding-left: 15px;
-    padding-right: 15px;
   }
 
   /*------------------------------------------------------------- header*/

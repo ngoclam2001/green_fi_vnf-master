@@ -15,6 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // slide
 
     var autoSlides = document.querySelectorAll(".js__swiperAutoContainer");
+    var OneSlides = document.querySelectorAll(".js__swiperOneContainer");
     const threeSlides = document.querySelectorAll(".js__threeSlidesContainer");
 
     const app = {
@@ -66,6 +67,28 @@ document.addEventListener("DOMContentLoaded", function () {
                     navigation: {
                         nextEl: next || null,
                         prevEl: prev || null,
+                    },
+                });
+            });
+        },
+
+        // slider one
+        sliderOneItems: function () {
+            OneSlides.forEach((item) => {
+                var slider = item.querySelector(".js__oneSlide");
+                var next = item.querySelector(".swiper-button-next");
+                var prev = item.querySelector(".swiper-button-prev");
+                var pagi = item.querySelector(".swiper-pagination");
+
+                new Swiper(slider, {
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                    navigation: {
+                        nextEl: next || null,
+                        prevEl: prev || null,
+                    },
+                    pagination: {
+                        el: pagi || null,
                     },
                 });
             });
@@ -139,6 +162,8 @@ document.addEventListener("DOMContentLoaded", function () {
             this.handleEvent();
             // slider auto
             this.sliderAutoItems();
+            // slider one
+            this.sliderOneItems();
             // slider three items
             this.sliderThreeItems();
             // window scroll
